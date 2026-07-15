@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Список учащихся</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Список учащихся в программировании</h1>
+
+  <!-- Поиск по имени -->
+  <input type="text" id="poisk" placeholder="Поиск по имени..." oninput="poiskStudent()" />
+
+  <!-- Кнопки сортировки -->
+  <button onclick="sortirovatPoImeni()">Сортировать по имени</button>
+  <button onclick="sortirovatPoVozrastu()">Сортировать по возрасту</button>
+
+  <!-- Форма добавления нового студента -->
+  <div class="forma">
+    <h2>Добавить учащегося</h2>
+    <input type="text"   id="imya"    placeholder="Имя" />
+    <input type="number" id="vozrast" placeholder="Возраст" />
+
+    <!-- Селект: область Узбекистана -->
+    <select id="oblast">
+      <option value="">-- Выберите область --</option>
+      <option value="Ташкент (город)">Ташкент (город)</option>
+      <option value="Ташкентская область">Ташкентская область</option>
+      <option value="Самаркандская область">Самаркандская область</option>
+      <option value="Ферганская область">Ферганская область</option>
+      <option value="Андижанская область">Андижанская область</option>
+      <option value="Наманганская область">Наманганская область</option>
+      <option value="Бухарская область">Бухарская область</option>
+      <option value="Хорезмская область">Хорезмская область</option>
+      <option value="Кашкадарьинская область">Кашкадарьинская область</option>
+      <option value="Сурхандарьинская область">Сурхандарьинская область</option>
+      <option value="Джизакская область">Джизакская область</option>
+      <option value="Сырдарьинская область">Сырдарьинская область</option>
+      <option value="Навоийская область">Навоийская область</option>
+      <option value="Республика Каракалпакстан">Республика Каракалпакстан</option>
+    </select>
+
+    <!-- Селект: направление -->
+    <select id="napravlenie">
+      <option value="">-- Выберите направление --</option>
+      <option value="Бэкенд">Бэкенд</option>
+      <option value="Фронтенд">Фронтенд</option>
+      <option value="Мобайл">Мобайл</option>
+      <option value="Кибербезопасность">Кибербезопасность</option>
+    </select>
+
+    <button onclick="dobavitStudenta()">Добавить</button>
+    <p id="oshibka"></p>
+  </div>
+
+  <!-- Таблица со списком -->
+  <table>
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Область</th>
+        <th>Направление</th>
+        <th>Удалить</th>
+      </tr>
+    </thead>
+    <tbody id="tablitsa"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
